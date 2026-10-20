@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>Yirong Xiang | Academic Homepage</title>
+
+  <meta
+    name="description"
+    content="Academic homepage of Yirong Xiang, a postdoctoral researcher working on trustworthy machine learning, biomedical artificial intelligence, multimodal learning, and computational cardiology."
+  >
+
+  <meta
+    name="keywords"
+    content="Yirong Xiang, Xiang Yirong, trustworthy machine learning, medical artificial intelligence, multimodal learning, computational cardiology, cardiac electrophysiology, representation learning"
+  >
+
+  <meta name="author" content="Yirong Xiang">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Yirong Xiang | Academic Homepage">
+  <meta
+    property="og:description"
+    content="Trustworthy machine learning, biomedical artificial intelligence, and computational cardiology."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yirong Xiang",
+    "alternateName": "向奕蓉",
+    "jobTitle": "Postdoctoral Researcher",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Air Force Medical Center, Air Force Medical University"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Manchester"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "The Chinese University of Hong Kong"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Xi'an Jiaotong University"
+      }
+    ],
+    "email": "mailto:yirong_xiang@163.com",
+    "sameAs": [
+      "https://orcid.org/0000-0001-6887-5610"
+    ]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       1. Global color system
+       ========================================================= */
+
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f7f8fa;
+      --bg-card: #ffffff;
+      --text: #202124;
+      --text-soft: #5f6368;
+      --heading: #111827;
+      --accent: #b4233c;
+      --accent-dark: #8e182f;
+      --accent-soft: #fff1f3;
+      --blue: #245f88;
+      --blue-soft: #eef5fa;
+      --green: #1d6b4b;
+      --green-soft: #edf8f3;
+      --border: #e2e5e9;
+      --shadow: 0 10px 32px rgba(15, 23, 42, 0.07);
+      --shadow-hover: 0 18px 44px rgba(15, 23, 42, 0.13);
+      --nav-bg: rgba(255, 255, 255, 0.92);
+      --max-width: 1080px;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #111418;
+      --bg-soft: #181c21;
+      --bg-card: #171b20;
+      --text: #e4e7eb;
+      --text-soft: #aeb6c0;
+      --heading: #f4f6f8;
+      --accent: #ee6b81;
+      --accent-dark: #ff8297;
+      --accent-soft: #321d24;
+      --blue: #78b6df;
+      --blue-soft: #172632;
+      --green: #74d4a7;
+      --green-soft: #193027;
+      --border: #30363d;
+      --shadow: 0 10px 32px rgba(0, 0, 0, 0.24);
+      --shadow-hover: 0 18px 44px rgba(0, 0, 0, 0.36);
+      --nav-bg: rgba(17, 20, 24, 0.92);
+    }
+
+    /* =========================================================
+       2. Basic styles
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        "Noto Sans SC",
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 76px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.55rem);
+      line-height: 1.16;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      max-width: 700px;
+      margin: 10px 0 0;
+      color: var(--text-soft);
+    }
+
+    .muted {
+      color: var(--text-soft);
+    }
+
+    /* =========================================================
+       3. Navigation
+       ========================================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      background: var(--nav-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      margin-left: 5px;
+      color: var(--accent);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 9px 11px;
+      border-radius: 8px;
+      color: var(--text-soft);
+      font-size: 0.91rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--heading);
+      background: var(--bg-card);
+      cursor: pointer;
+    }
+
+    .icon-button:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .menu-button {
+      display: none;
+    }
+
+    /* =========================================================
+       4. Hero
+       ========================================================= */
+
+    .hero {
+      padding: 80px 0 72px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 235px minmax(0, 1fr);
+      gap: 58px;
+      align-items: center;
+    }
+
+    .profile-photo-wrap {
+      position: relative;
+      width: 220px;
+      height: 268px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--bg-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .profile-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .profile-photo-wrap.missing .profile-fallback {
+      display: grid;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 9px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.75rem, 6vw, 4.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .hero h1 .chinese-name {
+      margin-left: 10px;
+      color: var(--text-soft);
+      font-family:
+        "Noto Serif SC",
+        "Songti SC",
+        SimSun,
+        serif;
+      font-size: 0.48em;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .hero-position {
+      margin: 17px 0 2px;
+      color: var(--heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .hero-institution {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .hero-theme {
+      max-width: 750px;
+      margin: 24px 0 0;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.28rem, 2.8vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .hero-intro {
+      max-width: 780px;
+      margin: 17px 0 0;
+      color: var(--text-soft);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .button {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      color: var(--heading);
+      background: var(--bg-card);
+      font-size: 0.91rem;
+      font-weight: 700;
+      transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .button-primary {
+      color: #ffffff;
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .button-primary:hover {
+      color: #ffffff;
+      border-color: var(--accent-dark);
+      background: var(--accent-dark);
+    }
+
+    .research-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .keyword {
+      padding: 5px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-soft);
+      background: var(--bg-soft);
+      font-size: 0.78rem;
+      font-weight: 650;
+    }
+
+    /* =========================================================
+       5. About
+       ========================================================= */
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(250px, 0.75fr);
+      gap: 52px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .research-question {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 9px 9px 0;
+      background: var(--accent-soft);
+    }
+
+    .research-question strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--accent);
+    }
+
+    .interest-list {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .interest-list li {
+      position: relative;
+      padding: 14px 14px 14px 37px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-card);
+    }
+
+    .interest-list li::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 17px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* =========================================================
+       6. News
+       ========================================================= */
+
+    .news-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 115px minmax(0, 1fr);
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-date {
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .news-content strong {
+      color: var(--heading);
+    }
+
+    .news-content p {
+      margin: 3px 0 0;
+      color: var(--text-soft);
+    }
+
+    .news-star {
+      color: #c78b1f;
+    }
+
+    /* =========================================================
+       7. Research filters
+       ========================================================= */
+
+    .research-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-button {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-soft);
+      background: var(--bg-card);
+      font-size: 0.83rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      color: #ffffff;
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .result-count {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       8. Research cards
+       ========================================================= */
+
+    .research-list {
+      display: grid;
+      gap: 28px;
+    }
+
+    .research-card {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.84fr) minmax(0, 1.45fr);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(180, 35, 60, 0.48);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .research-card.hidden {
+      display: none;
+    }
+
+    .figure-button {
+      position: relative;
+      min-height: 285px;
+      display: block;
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg-soft);
+      cursor: zoom-in;
+    }
+
+    .figure-button img {
+      width: 100%;
+      height: 100%;
+      min-height: 285px;
+      display: block;
+      object-fit: contain;
+      padding: 12px;
+      background: #ffffff;
+      transition: transform 0.35s ease;
+    }
+
+    html[data-theme="dark"] .figure-button img {
+      background: #f8f8f8;
+    }
+
+    .figure-button:hover img {
+      transform: scale(1.025);
+    }
+
+    .zoom-label {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: #ffffff;
+      background: rgba(17, 24, 39, 0.72);
+      font-size: 0.72rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(4px);
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .figure-button:hover .zoom-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-soft);
+      background: var(--bg-soft);
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .figure-button.missing .image-fallback {
+      display: flex;
+    }
+
+    .figure-button.missing .zoom-label {
+      display: none;
+    }
+
+    .research-body {
+      padding: 25px 28px 26px;
+    }
+
+    .paper-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .venue-badge,
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-size: 0.71rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .venue-badge {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .status-badge {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .research-title {
+      margin: 0;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.56rem);
+      line-height: 1.3;
+    }
+
+    .research-role {
+      margin: 9px 0 0;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .research-summary {
+      margin: 14px 0 0;
+      color: var(--text-soft);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-soft);
+      background: var(--bg-soft);
+      font-size: 0.72rem;
+      font-weight: 650;
+    }
+
+    .research-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 19px;
+    }
+
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--heading);
+      background: var(--bg-card);
+      font-size: 0.8rem;
+      font-weight: 750;
+    }
+
+    .paper-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    details.research-details {
+      margin-top: 17px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    details.research-details summary {
+      width: fit-content;
+      color: var(--blue);
+      font-size: 0.83rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    details.research-details ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+    }
+
+    details.research-details li + li {
+      margin-top: 5px;
+    }
+
+    /* =========================================================
+       9. Education timeline
+       ========================================================= */
+
+    .timeline {
+      position: relative;
+      margin-left: 9px;
+      padding-left: 31px;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 34px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -39px;
+      width: 13px;
+      height: 13px;
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .timeline-date {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-title {
+      margin: 5px 0 0;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+    }
+
+    .timeline-place {
+      margin: 3px 0 0;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .timeline-description {
+      margin: 8px 0 0;
+      color: var(--text-soft);
+    }
+
+    /* =========================================================
+       10. Project cards
+       ========================================================= */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-card);
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-card h3 {
+      margin: 8px 0 10px;
+      color: var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.23rem;
+      line-height: 1.35;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    /* =========================================================
+       11. Footer and utility buttons
+       ========================================================= */
+
+    .site-footer {
+      padding: 38px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-soft);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .footer-content p {
+      margin: 0;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 800;
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--heading);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       12. Image lightbox
+       ========================================================= */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 34px;
+      background: rgba(0, 0, 0, 0.88);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(1200px, 94vw);
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 5px;
+      background: #ffffff;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 1.45rem;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       13. Responsive layout
+       ========================================================= */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 36px;
+      }
+
+      .profile-photo-wrap {
+        width: 184px;
+        height: 228px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .research-card {
+        grid-template-columns: 1fr;
+      }
+
+      .figure-button {
+        min-height: 300px;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .figure-button img {
+        min-height: 300px;
+        max-height: 430px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        left: 0;
+        height: calc(100vh - 70px);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 24px 20px;
+        border-top: 1px solid var(--border);
+        background: var(--bg);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 15px;
+        font-size: 1rem;
+      }
+
+      .menu-button {
+        display: grid;
+      }
+
+      .hero {
+        padding: 55px 0 58px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .profile-photo-wrap {
+        width: 178px;
+        height: 220px;
+        margin-left: 0;
+      }
+
+      .hero h1 .chinese-name {
+        display: block;
+        margin: 8px 0 0;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .news-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .research-body {
+        padding: 22px 20px 23px;
+      }
+
+      .figure-button,
+      .figure-button img {
+        min-height: 245px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .brand span {
+        display: none;
+      }
+
+      .hero-actions .button {
+        flex: 1 1 auto;
+      }
+
+      .research-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lightbox {
+        padding: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       Navigation
+       ======================================================= -->
+
+  <header class="site-header">
+    <div class="container navbar">
+
+      <a class="brand" href="#home">
+        Yirong Xiang <span>向奕蓉</span>
+      </a>
+
+      <div class="nav-right">
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+
+        <button
+          class="icon-button"
+          id="themeButton"
+          type="button"
+          aria-label="Switch color theme"
+          title="Switch color theme"
+        >
+          ◐
+        </button>
+
+        <button
+          class="icon-button menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="profile-photo-wrap" id="profilePhotoWrap">
+          <img
+            class="profile-photo"
+            src="assets/profile.jpg"
+            alt="Portrait of Yirong Xiang"
+            onerror="document.getElementById('profilePhotoWrap').classList.add('missing'); this.style.display='none';"
+          >
+          <div class="profile-fallback" aria-hidden="true">YX</div>
+        </div>
+
+        <div>
+          <div class="hero-eyebrow">Academic Homepage</div>
+
+          <h1>
+            Yirong Xiang
+            <span class="chinese-name">向奕蓉</span>
+          </h1>
+
+          <p class="hero-position">Postdoctoral Researcher</p>
+
+          <p class="hero-institution">
+            Air Force Medical Center, Air Force Medical University
+          </p>
+
+          <p class="hero-theme">
+            Stable Structure under Limited Observation
+          </p>
+
+          <p class="hero-intro">
+            I study how learning systems can recover stable, interpretable,
+            and safely actionable structure from incomplete observations,
+            heterogeneous data sources, and shifting deployment environments.
+            My work connects trustworthy machine learning, biomedical
+            artificial intelligence, multimodal learning, physiological
+            signal analysis, and multiscale cardiac electrophysiology.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-primary"
+              href="mailto:yirong_xiang@163.com"
+            >
+              Email
+            </a>
+
+            <a
+              class="button"
+              href="https://orcid.org/0000-0001-6887-5610"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ORCID
+            </a>
+
+            <a
+              class="button"
+              id="githubLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              class="button"
+              href="assets/Yirong_Xiang_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
+
+          </div>
+
+          <div class="research-keywords">
+            <span class="keyword">Trustworthy Machine Learning</span>
+            <span class="keyword">Multimodal Learning</span>
+            <span class="keyword">Medical AI</span>
+            <span class="keyword">Computational Cardiology</span>
+            <span class="keyword">Mechanistic Modeling</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         About
+         ===================================================== -->
+
+    <section class="section section-soft" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">About Me</span>
+            <h2>Learning beyond spurious correlations</h2>
+          </div>
+        </div>
+
+        <div class="about-layout">
+
+          <div class="about-text">
+            <p>
+              I am a postdoctoral researcher at the Air Force Medical Center,
+              Air Force Medical University. I received my Ph.D. in
+              Computational Biophysics from the Department of Physics and
+              Astronomy at the University of Manchester, supervised by
+              Professor Henggui Zhang.
+            </p>
+
+            <p>
+              My research asks what information is identifiable from limited
+              supervision, which structures remain stable under distribution
+              shift, and when a model can be safely evaluated, calibrated, or
+              updated. I address these questions through statistical learning
+              theory, representation auditing, multimodal counterfactual
+              evaluation, gradient geometry, clinical data analysis, and
+              multiscale biophysical simulation.
+            </p>
+
+            <p>
+              A central motivation comes from biomedical systems: sparse
+              cellular measurements must explain tissue-level arrhythmia,
+              physiological signals must be interpreted across subjects and
+              centers, and medical imaging models must generalize despite
+              acquisition and institutional shortcuts.
+            </p>
+
+            <div class="research-question">
+              <strong>Core research question</strong>
+              Under partial observation, source heterogeneity, and distribution
+              shift, which learned structures are identifiable and invariant
+              rather than spurious—and what evidence is required to validate
+              them?
+            </div>
+          </div>
+
+          <aside>
+            <ul class="interest-list">
+              <li>Identifiable representation structure</li>
+              <li>Shortcut-resistant multimodal evaluation</li>
+              <li>Cross-center biomedical AI</li>
+              <li>Physiological signal dynamics</li>
+              <li>Gradient-based model intervention</li>
+              <li>Multiscale cardiac electrophysiology</li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         News
+         ===================================================== -->
+
+    <section class="section" id="news">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">News</span>
+            <h2>Recent updates</h2>
+          </div>
+        </div>
+
+        <div class="news-list">
+
+          <article class="news-item">
+            <div class="news-date">2026</div>
+            <div class="news-content">
+              <strong>
+                <span class="news-star">★</span>
+                Three papers accepted at NeurIPS 2026
+              </strong>
+              <p>
+                Two sole-first-author papers and one corresponding-author
+                paper on representation identifiability, multi-source
+                calibration, and counterfactual multimodal evaluation.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">Nov 2025</div>
+            <div class="news-content">
+              <strong>PLoS Computational Biology paper published</strong>
+              <p>
+                Our multiscale simulation study reveals biphasic effects of
+                L-type calcium-channel mutations on atrial arrhythmogenicity.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">2025</div>
+            <div class="news-content">
+              <strong>Circadian determinants review published in JMCC</strong>
+              <p>
+                Quantitative synthesis of autonomic, transcriptional, thermal,
+                and electrophysiological drivers of cardiac rhythms.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">Aug 2024</div>
+            <div class="news-content">
+              <strong>Started postdoctoral research</strong>
+              <p>
+                Joined the Air Force Medical Center to work on physiological
+                signal analysis, medical AI, and aviation medicine.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">2024</div>
+            <div class="news-content">
+              <strong>Circulation Research paper published</strong>
+              <p>
+                Multiscale computational modeling connected circadian
+                ion-channel regulation to ventricular arrhythmia susceptibility.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Research
+         ===================================================== -->
+
+    <section class="section section-soft" id="research">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Research Highlights</span>
+            <h2>Selected research projects</h2>
+            <p class="section-description">
+              Projects are organized by scientific theme rather than strictly
+              by publication date. Click a figure to enlarge it.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-toolbar">
+
+          <div class="filter-buttons" aria-label="Research filters">
+            <button class="filter-button active" data-filter="all">
+              All
+            </button>
+
+            <button class="filter-button" data-filter="theory">
+              Trustworthy ML
+            </button>
+
+            <button class="filter-button" data-filter="medical">
+              Medical AI
+            </button>
+
+            <button class="filter-button" data-filter="cardio">
+              Computational Cardiology
+            </button>
+          </div>
+
+          <div class="result-count" id="resultCount">10 / 10 projects</div>
+
+        </div>
+
+        <div class="research-list" id="researchList"></div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Education
+         ===================================================== -->
+
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Education</span>
+            <h2>Education and research training</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item">
+            <div class="timeline-date">Aug 2024 – Present</div>
+            <h3 class="timeline-title">Postdoctoral Researcher</h3>
+            <p class="timeline-place">
+              Air Force Medical Center, Air Force Medical University
+            </p>
+            <p class="timeline-description">
+              Collaborating with Director Xianrong Xu on aviation medicine,
+              physiological signal analysis, biomedical artificial intelligence,
+              and post-infection recovery assessment. Invited speaker at the
+              Tsinghua University Postdoctoral Zijin Forum.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Sep 2019 – May 2024</div>
+            <h3 class="timeline-title">
+              Ph.D. in Computational Biophysics
+            </h3>
+            <p class="timeline-place">
+              Department of Physics and Astronomy, The University of Manchester
+            </p>
+            <p class="timeline-description">
+              Supervisor: Professor Henggui Zhang. Research on multiscale
+              cardiac electrophysiology, ion-channel modeling, reaction-diffusion
+              simulation, and arrhythmia mechanisms. Served as a PASS leader
+              and teaching assistant for Python/C++ programming courses.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Aug 2018 – Aug 2019</div>
+            <h3 class="timeline-title">
+              Graduate Study in Condensed Matter Physics
+            </h3>
+            <p class="timeline-place">
+              Department of Physics, The Chinese University of Hong Kong
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Aug 2014 – Jul 2018</div>
+            <h3 class="timeline-title">
+              B.S. in Physics, Experimental Honors Program
+            </h3>
+            <p class="timeline-place">
+              School of Science, Xi'an Jiaotong University
+            </p>
+            <p class="timeline-description">
+              Honors Graduate of Xi'an Jiaotong University and recipient of
+              the Siyuan Scholarship. Served in student leadership and
+              international student exchange organizations.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Projects
+         ===================================================== -->
+
+    <section class="section section-soft" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Research Projects</span>
+            <h2>Representative scientific programs</h2>
+          </div>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-number">Project 01</div>
+            <h3>
+              Vestibular autonomic function stability in pilot candidates
+            </h3>
+            <p>
+              Led a multidisciplinary, three-center study involving Coriolis
+              acceleration testing and continuous ECG analysis. Developed a
+              multi-domain HRV pipeline for dynamic physiological assessment
+              across rest, stimulation, and recovery.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">Project 02</div>
+            <h3>
+              Recovery assessment after COVID-19 infection in flight personnel
+            </h3>
+            <p>
+              Analyzed pre- and post-infection ECG differences and investigated
+              associations between infection history, recovery trajectories,
+              and key cardiovascular indicators.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">Project 03</div>
+            <h3>
+              Shortcut mitigation and cross-center chest radiograph AI
+            </h3>
+            <p>
+              Evaluated chest radiograph classifiers under institutional,
+              device, and acquisition shifts. Developed annotation-free
+              channel-ranking methods to retain pathology-relevant structure
+              while suppressing non-pathological shortcuts.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">Project 04</div>
+            <h3>
+              Multiscale cardiac electrophysiology and arrhythmia mechanisms
+            </h3>
+            <p>
+              Developed ion-channel, cellular, cable, tissue, and anatomical
+              cardiac models to study calcium-channel abnormalities, circadian
+              regulation, drug effects, and the initiation and maintenance of
+              cardiac re-entry.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================
+       Footer
+       ======================================================= -->
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Yirong Xiang.
+        Academic homepage hosted with GitHub Pages.
+      </p>
+
+      <p>
+        Last updated: October 2026
+      </p>
+    </div>
+  </footer>
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+    title="Back to top"
+  >
+    ↑
+  </button>
+
+  <!-- Image lightbox -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Enlarged research figure"
+  >
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Close enlarged figure"
+    >
+      ×
+    </button>
+
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    /* =========================================================
+       Research project data
+       ========================================================= */
+
+    const researchProjects = [
+      {
+        number: "01",
+        categories: ["theory"],
+        venue: "NeurIPS 2026",
+        status: "Accepted",
+        title: "What Can Labels Alone Audit and Edit in Frozen Representations?",
+        role: "Sole first author",
+        image: "assets/fig01_labels_quotient.png",
+        summary:
+          "Establishes the exact identifiability boundary of label-only representation auditing. Task labels determine the posterior quotient, but cannot uniquely recover a finer semantic-background factorization.",
+        details: [
+          "Defines the posterior quotient as the coarsest deterministic representation preserving all label information.",
+          "Proves non-identifiability of finer semantic and background decompositions from task labels alone.",
+          "Introduces a quotient-first workflow and Dual-Moment Decomposition for reliable residual editing."
+        ],
+        tags: [
+          "Identifiability",
+          "Representation auditing",
+          "Frozen features",
+          "Post-hoc editing"
+        ],
+        links: [
+          {
+            label: "OpenReview ↗",
+            url: "https://openreview.net/forum?id=5rXQteakrg"
+          }
+        ]
+      },
+
+      {
+        number: "02",
+        categories: ["theory"],
+        venue: "NeurIPS 2026",
+        status: "Accepted",
+        title: "Can Metadata Fix the Gauge?",
+        role: "Sole first author",
+        image: "assets/fig02_metadata_gauge.png",
+        summary:
+          "Shows that unknown source-specific coordinate gauges can turn sparse multi-source learning into a sparse-PCA problem. Valid relative-gauge metadata restores first-order signal and sparse-mean scaling.",
+        details: [
+          "Formulates multi-source coordinate ambiguity using latent source orientations.",
+          "Introduces aligned mass to quantify effective first-order signal after source calibration.",
+          "Develops Gauge-Synchronize-Linearize using spectral synchronization and soft thresholding."
+        ],
+        tags: [
+          "Multi-source learning",
+          "Spectral synchronization",
+          "Sparse recovery",
+          "Metadata calibration"
+        ],
+        links: [
+          {
+            label: "OpenReview ↗",
+            url: "https://openreview.net/forum?id=Q5Hpa44zeJ"
+          }
+        ]
+      },
+
+      {
+        number: "03",
+        categories: ["theory"],
+        venue: "NeurIPS 2026",
+        status: "Accepted",
+        title: "Can the Parts Fool the Test? Counterfactual Pairing Cycles for Relational OOD",
+        role: "Corresponding author",
+        image: "assets/fig03_pairing_cycles.png",
+        summary:
+          "Introduces balanced counterfactual pairing cycles that hold image and text marginals fixed while changing only their pairing. Additive image-only and text-only shortcuts cancel exactly in finite samples.",
+        details: [
+          "Constructs balanced 2 × 2 image-text pairing cycles from valid and swapped pairs.",
+          "Uses a cycle contrast to isolate relational cross-modal interaction.",
+          "Provides exact finite-sample cancellation of additive unimodal shortcut scores."
+        ],
+        tags: [
+          "Multimodal learning",
+          "Relational OOD",
+          "Shortcut resistance",
+          "Counterfactual evaluation"
+        ],
+        links: [
+          {
+            label: "OpenReview ↗",
+            url: "https://openreview.net/forum?id=nLCr7f3CZV"
+          }
+        ]
+      },
+
+      {
+        number: "04",
+        categories: ["theory"],
+        venue: "Neural Networks",
+        status: "Under review",
+        title: "Equilibrium Disruption Energy",
+        role: "Sole first author",
+        image: "assets/fig04_ede.png",
+        summary:
+          "Develops a sample-level reliability score based on whether a candidate gradient is supported by the empirical gradient covariance of the converged training model.",
+        details: [
+          "Estimates the empirical per-sample gradient covariance spectrum at model convergence.",
+          "Separates well-supported principal directions from weakly supported tail eigenspaces.",
+          "Applies inverse-spectrum scoring to OOD detection, active learning, and noisy-label auditing."
+        ],
+        tags: [
+          "Gradient geometry",
+          "OOD detection",
+          "Active learning",
+          "Label noise"
+        ],
+        links: []
+      },
+
+      {
+        number: "05",
+        categories: ["medical", "theory"],
+        venue: "npj Digital Medicine",
+        status: "Renewed review",
+        title: "Mitigating Shortcut Reliance for Generalizable Chest Radiograph AI with CURE",
+        role: "Sole first author",
+        image: "assets/fig05_cure.jpg",
+        summary:
+          "Develops an annotation-free framework for identifying feature channels with stable cross-environment pathological value and suppressing hospital, device, and acquisition shortcuts.",
+        details: [
+          "Combines compact spatial attention, feature decorrelation, and information-theoretic channel ranking.",
+          "Evaluates more than 900,000 radiographs from four multi-institutional cohorts.",
+          "Improves external-hospital robustness while preserving source-hospital performance."
+        ],
+        tags: [
+          "Chest radiography",
+          "Cross-center generalization",
+          "Shortcut mitigation",
+          "Medical AI"
+        ],
+        links: []
+      },
+
+      {
+        number: "06",
+        categories: ["theory"],
+        venue: "ICML 2024",
+        status: "Published",
+        title: "Pedestrian Attribute Recognition as Label-balanced Multi-label Learning",
+        role: "Third author",
+        image: "assets/fig06_icml_frdl.png",
+        summary:
+          "Decouples representation learning from attribute-level balancing by performing independent re-sampling in attribute-specific feature spaces rather than at the image level.",
+        details: [
+          "Avoids distortion of co-occurring attribute priors caused by image-level re-sampling.",
+          "Maintains attribute-specific feature banks for independent positive-negative balancing.",
+          "Uses gradient-oriented Bayesian augmentation to expand tail-attribute diversity."
+        ],
+        tags: [
+          "Multi-label learning",
+          "Long-tailed learning",
+          "Feature re-sampling",
+          "Attribute recognition"
+        ],
+        links: [
+          {
+            label: "Paper ↗",
+            url: "https://proceedings.mlr.press/v235/zhou24j.html"
+          }
+        ]
+      },
+
+      {
+        number: "07",
+        categories: ["medical"],
+        venue: "Air Force Aviation Medicine",
+        status: "Accepted",
+        title: "Multi-Domain HRV for Vestibular Autonomic Function Stability",
+        role: "Sole first author",
+        image: "assets/fig07_hrv_lasso.jpg",
+        summary:
+          "A three-center repeated-measures study showing that within-subject perturbation-recovery trajectories provide more stable physiological information than static resting indices.",
+        details: [
+          "Recorded continuous ECG during rest, Coriolis stimulation, and a 20-minute recovery period.",
+          "Extracted time-domain, frequency-domain, and nonlinear HRV measurements.",
+          "Combined generalized estimating equations with nested cross-validated LASSO."
+        ],
+        tags: [
+          "Heart-rate variability",
+          "ECG",
+          "Aviation medicine",
+          "Longitudinal modeling"
+        ],
+        links: []
+      },
+
+      {
+        number: "08",
+        categories: ["cardio", "medical"],
+        venue: "PLoS Computational Biology",
+        status: "Published · 2025",
+        title: "Biphasic Effects of L-type Calcium Channel Mutations",
+        role: "Sole first author",
+        image: "assets/fig08_plos_biphasic.jpg",
+        summary:
+          "Uses experimentally constrained cellular, one-dimensional, two-dimensional, and anatomical three-dimensional atrial models to reveal a biphasic relationship between calcium-current loss and arrhythmia risk.",
+        details: [
+          "Calibrates mutation-specific calcium-channel conductance and gating against voltage-clamp data.",
+          "Quantifies action-potential restitution, conduction, refractory period, and re-entry dynamics.",
+          "Shows that moderate and severe current loss affect spiral and scroll-wave stability in opposite ways."
+        ],
+        tags: [
+          "Cardiac electrophysiology",
+          "Reaction-diffusion modeling",
+          "Atrial arrhythmia",
+          "Multiscale simulation"
+        ],
+        links: [
+          {
+            label: "Paper ↗",
+            url: "https://doi.org/10.1371/journal.pcbi.1013616"
+          }
+        ]
+      },
+
+      {
+        number: "09",
+        categories: ["cardio", "medical"],
+        venue: "Circulation Research",
+        status: "Published · 2024",
+        title: "Cardiac GR Mediates the Diurnal Rhythm in Ventricular Arrhythmia Susceptibility",
+        role: "Lead computational modeling contributor",
+        image: "assets/fig09_circres_model.jpg",
+        summary:
+          "Integrates time-of-day electrophysiological measurements into ventricular tissue models to explain how glucocorticoid-driven ion-channel rhythms alter conduction and re-entry vulnerability.",
+        details: [
+          "Mapped experimentally measured ionic conductances and gap-junction coupling into ventricular models.",
+          "Computed restitution, propagation velocity, wavelength, and premature-stimulation vulnerability windows.",
+          "Connected model predictions with pharmacological GR blockade and cardiomyocyte-specific knockout experiments."
+        ],
+        tags: [
+          "Circadian electrophysiology",
+          "Ventricular arrhythmia",
+          "Glucocorticoid receptor",
+          "Mechanistic validation"
+        ],
+        links: [
+          {
+            label: "Paper ↗",
+            url: "https://doi.org/10.1161/CIRCRESAHA.123.323464"
+          }
+        ]
+      },
+
+      {
+        number: "10",
+        categories: ["cardio", "medical"],
+        venue: "JMCC",
+        status: "Published · 2025",
+        title: "Circadian Determinants of Heart Rhythm and Arrhythmias",
+        role: "Third author",
+        image: "assets/fig10_jmcc_circadian.jpg",
+        summary:
+          "Provides a mechanistic and quantitative synthesis of autonomic, transcriptional, thermal, endocrine, and electrophysiological drivers of circadian cardiac rhythms.",
+        details: [
+          "Integrates autonomic receptor kinetics, local clock-controlled channel expression, and thermal scaling.",
+          "Uses in-silico factor clamping to compare autonomic, temperature, and intrinsic clock contributions.",
+          "Shows that diurnal cardiac variation emerges from nonlinear interaction among multiple drivers."
+        ],
+        tags: [
+          "Circadian biology",
+          "Sinoatrial node",
+          "Pacemaking",
+          "Quantitative synthesis"
+        ],
+        links: [
+          {
+            label: "Paper ↗",
+            url: "https://doi.org/10.1016/j.yjmcc.2025.08.012"
+          }
+        ]
+      }
+    ];
+
+    /* =========================================================
+       Render research cards
+       ========================================================= */
+
+    const researchList = document.getElementById("researchList");
+    const resultCount = document.getElementById("resultCount");
+
+    function renderResearchCards() {
+      researchList.innerHTML = researchProjects.map((project) => {
+        const details = project.details
+          .map((item) => `<li>${item}</li>`)
+          .join("");
+
+        const tags = project.tags
+          .map((tag) => `<span class="tag">${tag}</span>`)
+          .join("");
+
+        const links = project.links.length
+          ? `
+            <div class="research-links">
+              ${project.links.map((link) => `
+                <a
+                  class="paper-link"
+                  href="${link.url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ${link.label}
+                </a>
+              `).join("")}
+            </div>
+          `
+          : "";
+
+        return `
+          <article
+            class="research-card"
+            data-categories="${project.categories.join(" ")}"
+          >
+            <button
+              class="figure-button"
+              type="button"
+              data-image="${project.image}"
+              data-title="${project.title.replace(/"/g, "&quot;")}"
+              aria-label="Enlarge figure for ${project.title.replace(/"/g, "&quot;")}"
+            >
+              <img
+                src="${project.image}"
+                alt="Research figure for ${project.title.replace(/"/g, "&quot;")}"
+                loading="lazy"
+                onerror="this.style.display='none'; this.closest('.figure-button').classList.add('missing');"
+              >
+
+              <span class="image-fallback">
+                Figure not uploaded yet:<br>
+                ${project.image}
+              </span>
+
+              <span class="zoom-label">Click to enlarge</span>
+            </button>
+
+            <div class="research-body">
+
+              <div class="paper-meta">
+                <span class="venue-badge">${project.venue}</span>
+                <span class="status-badge">${project.status}</span>
+              </div>
+
+              <h3 class="research-title">
+                ${project.title}
+              </h3>
+
+              <p class="research-role">
+                ${project.role}
+              </p>
+
+              <p class="research-summary">
+                ${project.summary}
+              </p>
+
+              <div class="tag-list">
+                ${tags}
+              </div>
+
+              ${links}
+
+              <details class="research-details">
+                <summary>Research summary</summary>
+                <ul>${details}</ul>
+              </details>
+
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    renderResearchCards();
+
+    /* =========================================================
+       Research filtering
+       ========================================================= */
+
+    const filterButtons = document.querySelectorAll(".filter-button");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        let visibleCount = 0;
+
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        document.querySelectorAll(".research-card").forEach((card) => {
+          const categories = card.dataset.categories.split(" ");
+          const shouldShow =
+            filter === "all" || categories.includes(filter);
+
+          card.classList.toggle("hidden", !shouldShow);
+
+          if (shouldShow) {
+            visibleCount += 1;
+          }
+        });
+
+        resultCount.textContent =
+          `${visibleCount} / ${researchProjects.length} projects`;
+      });
+    });
+
+    /* =========================================================
+       Dark mode
+       ========================================================= */
+
+    const themeButton = document.getElementById("themeButton");
+    const savedTheme = localStorage.getItem("academic-homepage-theme");
+    const systemDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    function applyTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("academic-homepage-theme", theme);
+      themeButton.textContent = theme === "dark" ? "☀" : "◐";
+    }
+
+    applyTheme(savedTheme || (systemDark ? "dark" : "light"));
+
+    themeButton.addEventListener("click", () => {
+      const current =
+        document.documentElement.dataset.theme || "light";
+
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+
+    /* =========================================================
+       Mobile navigation
+       ========================================================= */
+
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    function closeMenu() {
+      navLinks.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "☰";
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) {
+        closeMenu();
+      }
+    });
+
+    /* =========================================================
+       Active navigation item
+       ========================================================= */
+
+    const sections = document.querySelectorAll(
+      "main section[id]"
+    );
+
+    const navigationAnchors = document.querySelectorAll(
+      ".nav-links a"
+    );
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          navigationAnchors.forEach((anchor) => {
+            anchor.classList.toggle(
+              "active",
+              anchor.getAttribute("href") === `#${entry.target.id}`
+            );
+          });
+        });
+      },
+      {
+        rootMargin: "-30% 0px -62% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => {
+      sectionObserver.observe(section);
+    });
+
+    /* =========================================================
+       Figure lightbox
+       ========================================================= */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".figure-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.classList.contains("missing")) return;
+
+        lightboxImage.src = button.dataset.image;
+        lightboxImage.alt = button.dataset.title;
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+        closeMenu();
+      }
+    });
+
+    /* =========================================================
+       Back-to-top button
+       ========================================================= */
+
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      backToTop.classList.toggle(
+        "visible",
+        window.scrollY > 650
+      );
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    /* =========================================================
+       Automatic GitHub profile and footer year
+       ========================================================= */
+
+    const githubLink = document.getElementById("githubLink");
+
+    if (location.hostname.endsWith(".github.io")) {
+      const githubUsername = location.hostname.split(".")[0];
+      githubLink.href = `https://github.com/${githubUsername}`;
+    } else {
+      githubLink.href = "https://github.com/";
+    }
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
